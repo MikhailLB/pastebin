@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Text</title>
+    <link rel="stylesheet" href="{% static 'api/css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Edit Text</h1>
+
+        <!-- Форма для редактирования текста -->
+        <form method="post" class="text-container">
+            {% csrf_token %}
+            {{ form.as_p }}  <!-- Отображение формы с текстом для редактирования -->
+            <input type="submit" value="Update">
+        </form>
+
+        <!-- Ссылка на текст -->
+        <div class="link-container">
+            <p>Ссылка на текст:</p>
+            <a href="http://127.0.0.1:8000/{{ pastebin.unique_hash }}" id="paste-link">
+                http://127.0.0.1:8000/{{ pastebin.unique_hash }}
+            </a>
+        </div>
+
+        <!-- Кнопки -->
+        <div class="button-container">
+            <a href="{% url 'home' %}" class="btn">Назад</a> <!-- Ссылка на главную -->
+            <input type="submit" value="Отправить" class="btn"> <!-- Кнопка отправки -->
+        </div>
+    </div>
+</body>
+</html>

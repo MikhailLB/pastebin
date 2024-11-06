@@ -1,0 +1,167 @@
+/* styles.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: white;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box; /* Новый стиль, чтобы padding не увеличивал размер контейнера */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+header h1 {
+    font-size: 28px;
+    color: #333;
+}
+
+header nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #0056b3;
+}
+
+.create-block {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%; /* Чтобы блок занимал всю ширину контейнера */
+    box-sizing: border-box; /* Убедимся, что padding учтен */
+}
+
+#create-block textarea {
+    width: 100%;
+    height: 200px; /* Выбор немного меньшей высоты, чтобы текстовое поле лучше вписывалось */
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    resize: none;
+    box-sizing: border-box; /* Новый стиль для правильного учета padding */
+    margin-bottom: 15px; /* Отступ снизу */
+}
+
+#create-block textarea:focus {
+    border-color: #007bff;
+    background-color: #fff;
+    outline: none;
+}
+
+#create-block button {
+    padding: 12px 25px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#create-block button:hover {
+    background-color: #0056b3;
+}
+
+.links {
+    margin-top: 30px;
+}
+
+#links-list div {
+    padding: 15px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+}
+.container {
+    width: 50%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.text-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#paste-text {
+    font-size: 1.2em;
+    white-space: pre-wrap; /* Ensures line breaks are preserved */
+}
+
+.link-container {
+    margin-bottom: 20px;
+}
+
+#paste-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#paste-link:hover {
+    text-decoration: underline;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}

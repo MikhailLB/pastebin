@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastebin - View Text</title>
+    <link rel="stylesheet" href="{% static 'api/css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Text Display</h1>
+
+        <div class="text-container">
+            <p id="paste-text">{{ text }}</p> <!-- Отображаем текст -->
+        </div>
+
+        <div class="link-container">
+            <p>Ссылка на текст:</p>
+            <a href="http://127.0.0.1:8000/{{ unique_hash }}" id="paste-link">
+                http://127.0.0.1:8000/{{ unique_hash }}
+            </a> <!-- Ссылка на текст по хэшу -->
+        </div>
+
+        <div class="button-container">
+            <a href="{% url 'home' %}" class="btn">Назад</a> <!-- Ссылка на главную -->
+            <!-- Проверяем, есть ли unique_hash, и передаем его в ссылку редактирования -->
+            {% if unique_hash %}
+                <a href="{% url 'update_page' unique_hash=unique_hash %}" class="btn">Редактировать текст</a>
+            {% else %}
+                <p>Уникальный идентификатор не найден</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
+

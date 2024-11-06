@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PasteBin Clone</title>
+    <!-- Подключение CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'api/css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PasteBin Clone</h1>
+            <nav>
+                <a href="#" id="login">Login</a>
+                <a href="#" id="profile">Profile</a>
+            </nav>
+        </header>
+        <main>
+            <!--Форма заполнения-->
+            {% block content %}
+
+            {% endblock %}
+            <!--Конец формы-->
+            <section class="links">
+                <h2>Your Links</h2>
+                <div id="links-list">
+                    {% block links %}
+
+                    {% endblock %}
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>© 2024 PasteBin Clone. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
