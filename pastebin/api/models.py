@@ -18,9 +18,7 @@ class PasteBin(models.Model):
 
     def generate_unique_hash(self):
         while True:
-            # Генерация случайного хэша длиной 8 символов
             new_hash = ''.join(random.choices(string.ascii_letters + string.digits, k=8))
-            # Проверка уникальности хэша в базе данных
             if not PasteBin.objects.filter(unique_hash=new_hash).exists():
                 return new_hash
 
